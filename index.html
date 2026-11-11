@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#100b19">
+<title>VDM SMP – Dein Minecraft-Abenteuer</title>
+<style>
+:root{--bg:#0d0913;--panel:#191222;--purple:#c77dff;--muted:#c0b2ce}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(ellipse at 50% -20%,#45265e,transparent 55%),var(--bg);color:#fff;font-family:Arial,sans-serif}
+.wrap{width:min(1050px,92%);margin:auto}header{position:sticky;top:0;background:#100b19ed;border-bottom:1px solid #ffffff18}
+nav{height:68px;display:flex;align-items:center;justify-content:space-between}.brand{font-size:21px;font-weight:900;color:white;text-decoration:none}.brand span,h1 span{color:var(--purple)}
+nav a{color:var(--muted);text-decoration:none;margin-left:18px}.hero{text-align:center;padding:115px 0 100px}
+.tag{color:#e8ceff;border:1px solid #c77dff66;background:#c77dff18;border-radius:30px;padding:9px 14px;font-size:12px;letter-spacing:2px}
+h1{font-size:clamp(44px,8vw,86px);line-height:1;margin:28px 0 16px;letter-spacing:-3px}
+.lead{max-width:620px;margin:auto;color:var(--muted);font-size:18px;line-height:1.6}
+.btn{display:inline-block;margin:26px 6px 0;padding:14px 20px;border-radius:11px;background:var(--purple);color:#170d20;font-weight:bold;border:0;cursor:pointer;text-decoration:none}
+.btn.alt{background:#ffffff10;color:white;border:1px solid #ffffff30}.hint{color:var(--muted);font-size:13px;margin-top:12px}
+section{padding:65px 0}.title{text-align:center;font-size:34px;margin:0 0 12px}.sub{text-align:center;color:var(--muted);margin:0 auto 32px;line-height:1.6}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.card{background:linear-gradient(145deg,#21172d,#130e1b);border:1px solid #ffffff18;border-radius:17px;padding:24px}.card h3{margin:12px 0}.card p,.rule{color:var(--muted);line-height:1.6}
+.rules{max-width:760px;margin:auto}.rule{padding:16px 0;border-bottom:1px solid #ffffff18}.rule b{color:var(--purple);margin-right:15px}
+.cta{text-align:center;padding:40px 20px;border:1px solid #c77dff44;border-radius:20px;background:#241733}
+footer{border-top:1px solid #ffffff18;padding:24px 0;color:#a99ab7;font-size:13px}
+@media(max-width:700px){.grid{grid-template-columns:1fr}nav a{margin-left:9px;font-size:13px}.hero{padding:85px 0}}
+</style></head>
+<body>
+<header><div class="wrap"><nav><a class="brand" href="#">✦ VDM <span>SMP</span></a><div><a href="#server">Server</a><a href="#regeln">Regeln</a><a href="#community">Community</a></div></nav></div></header>
+<main>
+<section class="hero"><div class="wrap"><span class="tag">MINECRAFT · COMMUNITY · ABENTEUER</span>
+<h1>DEIN ABENTEUER.<br><span>DEIN VDM SMP.</span></h1>
+<p class="lead">Erkunde die Welt, baue dein eigenes Zuhause und werde Teil unserer Community. Dein nächstes Minecraft-Abenteuer wartet!</p>
+<button class="btn" onclick="copyIP()">SERVER-IP KOPIEREN</button><a class="btn alt" href="#regeln">REGELN ANSEHEN</a>
+<div class="hint" id="hint">Server-Adresse wird noch eingetragen.</div></div></section>
+<section id="server"><div class="wrap"><h2 class="title">Willkommen auf VDM SMP</h2><p class="sub">Alles für deinen Start auf dem Server.</p><div class="grid">
+<div class="card"><div>⚔️</div><h3>Dein Abenteuer</h3><p>Erkunde die Welt, sammle Ressourcen und stelle dich neuen Herausforderungen.</p></div>
+<div class="card"><div>💜</div><h3>Unsere Community</h3><p>Triff andere Spieler und werde Teil der VDM-SMP-Community.</p></div>
+<div class="card"><div>🏆</div><h3>Dein Fortschritt</h3><p>Spiele, entwickle dich weiter und entdecke die Möglichkeiten des Servers.</p></div>
+</div></div></section>
+<section id="regeln"><div class="wrap"><h2 class="title">Serverregeln</h2><p class="sub">Fair bleiben und gemeinsam Spaß haben.</p><div class="rules">
+<div class="rule"><b>01</b> Behandle andere Spieler respektvoll.</div><div class="rule"><b>02</b> Keine Cheats, Hacks oder unerlaubten Vorteile.</div>
+<div class="rule"><b>03</b> Zerstöre keine fremden Bauwerke und stehle nicht entgegen den Serverregeln.</div>
+<div class="rule"><b>04</b> Folge den Anweisungen des Serverteams.</div><div class="rule"><b>05</b> Halte dich an die Regeln im Discord und Voice-Chat.</div>
+</div></div></section>
+<section id="community"><div class="wrap"><div class="cta"><h2 class="title">Werde Teil von VDM SMP</h2><p class="sub">Hier kommt später dein Discord-Einladungslink hin.</p><a class="btn alt" href="#" onclick="alert('Bitte füge deinen Discord-Link in index.html ein.');return false">DISCORD BEITRETEN</a></div></div></section>
+</main><footer><div class="wrap">© 2026 VDM SMP · Mit 💜 für die Community</div></footer>
+<script>
+const SERVER_ADDRESS="DEINE-SERVER-IP"; // Hier deine echte Minecraft-Adresse eintragen.
+function copyIP(){const h=document.getElementById('hint');if(SERVER_ADDRESS==='DEINE-SERVER-IP'){h.textContent='Trage zuerst deine Server-Adresse in index.html ein.';return;}navigator.clipboard.writeText(SERVER_ADDRESS).then(()=>h.textContent='Kopiert: '+SERVER_ADDRESS).catch(()=>h.textContent=SERVER_ADDRESS);}
+</script></body></html>
